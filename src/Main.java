@@ -6,6 +6,8 @@ import Util.Input;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Welcome to WORD LADDER SOLVER!");
+
         Input input = new Input();
         Result hasil;
 

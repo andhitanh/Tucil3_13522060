@@ -10,7 +10,7 @@ UCS, Greedy Best First Search, and A* Algorithms in Solving Word Ladder Game
 * [Repository Structure](#repository-structure)
 
 ## General Information
-Program ini menggunakan Algoritma Brute Force untuk menyelesaikan persoalan pencarian optimal pola dengan nilai terbesar yang terinspirasi dari permasalahan Breach Protocol pada permainan Cyberpunk 2077. Program akan menerima masukan berupa data token, matriks dari token, ukuran buffer, sekuens, dan nilai dari tiap sekuens. Kemudian, program akan mengembalikan data pola token yang memberikan nilai reward paling optimal jika pola token paling optimal terdapat pada matriks token.
+Program ini menggunakan Algoritma UCS, Greedy Best First Search, and A* untuk menyelesaikan persoalan pencarian lintasan dari dua kata dengan aturan permainan Word Ladder.
 
 ## Creator
 | NIM      | Nama                    | Kelas                                                                                                                                                                                                               |
@@ -18,52 +18,58 @@ Program ini menggunakan Algoritma Brute Force untuk menyelesaikan persoalan penc
 | 13522060 | Andhita Naura Hariyanto    | K-02                                                              |
 
 ## Features
-- Menampilkan solusi Permainan Cyberpunk 2077 Beach Protocol berdasarkan input data matriks dan sekuens dari pengguna.
-- Menampilkan solusi Permainan Cyberpunk 2077 Beach Protocol berdasarkan matriks dan sekuens yang dipilih secara random.
-- Menyimpan solusi Permainan Cyberpunk 2077 Beach Protocol ke dalam file .txt yang akan tersimpan dalam folder test/output
+- Menampilkan solusi Permainan Word Ladder dengan algoritma A* atau UCS atau Greedy Best First Search.
 
 ## Requirements
-Anda harus menginstall bahasa python untuk menjalankan program ini.
+Anda harus menginstall bahasa Java untuk menjalankan program ini.
 
 ## How to Run
-1. Buka terminal and clone repository berikut (https://github.com/andhitanh/Tucil1_K2_13522060.git)
+1. Buka terminal and clone repository berikut (https://github.com/andhitanh/Tucil3_13522060.git)
 
 2. Buka folder src dengan menjalankan command berikut pada folder utama di
 ```
 cd src
 ```
 
-3. Jalankan program utama dengan perintah berikut
+3. Kompilasi program
 
 ```
-python main.py
+javac -d ..\bin Algorithm/*.java Util/*.java Main.java
+```
+4. Jalankan program utama dengan perintah berikut
+
+```
+java Main.java
+```
+1. Apabila menggunakan windows bisa run dengan perintah berikut
+
+```
+./run.bat
 ```
 
 ## Repository Structure
 ```
 +---bin
-+----------build  
-+----------dist
-|           main.exe
-|       main.spec
 |
 +---doc
-|       Tucil1_K2_13522060_Andhita Naura Hariyanto.pdf
+|       Tucil3_13522060.pdf
+|
++---lib
+|       Dictionary.txt
 |
 +---src
-|       main.py
-|       randomize.py
-|       sekuens.py
-|       tokens.py
-|       tree.py
++----------Algorithm                
+|               Astar.java
+|               GBFS.java
+|               UCS.java
++----------Util                
+|               DictionaryChecker.java
+|               Input.java
+|               Node.java
+|               Result.java
+|       Main.java
 |
 +---test
-+----------output                
-|               testcase1output.txt
-|               testcase2output.txt
-|               testcase4output.txt
-|               testcase6output.txt
-|               testcase7output.txt
 |       testcase1.txt
 |       testcase2.txt
 |       testcase3.txt

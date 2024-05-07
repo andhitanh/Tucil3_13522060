@@ -25,7 +25,7 @@ public class Astar {
         
         pq.add(startWord);
         
-        long startTime = System.nanoTime(); // Record start time
+        long startTime = System.nanoTime(); 
         Node currentWord = null;
         while (!pq.isEmpty()) {
             currentWord =  pq.poll();
@@ -65,8 +65,8 @@ public class Astar {
             }
         }
 
-        long endTime = System.nanoTime(); // Record end time
-        double runtime = (double)(endTime - startTime)/1000000; // Calculate runtime in nanoseconds
+        long endTime = System.nanoTime(); 
+        double runtime = (double)(endTime - startTime)/1000000; 
 
         if (pq.size() != 0) {
             List<String> path = new ArrayList<>();

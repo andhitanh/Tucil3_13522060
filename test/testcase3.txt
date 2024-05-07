@@ -1,0 +1,2 @@
+start : ready
+target : great

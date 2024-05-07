@@ -41,7 +41,7 @@ javac -d ..\bin Algorithm/*.java Util/*.java Main.java
 ```
 java Main.java
 ```
-1. Apabila menggunakan windows bisa run dengan perintah berikut
+1. Apabila menggunakan windows bisa run dengan perintah berikut tanpa menjalankan 4 langkah di atas
 
 ```
 ./run.bat

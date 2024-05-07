@@ -12,14 +12,6 @@ public class Node {
         this.cost = cost;
     }
 
-    // public void setChildNode (Node node) {
-    //     this.children.add(node);
-    // }
-
-    // public List<Node> getChildren() {
-    //     return this.children;
-    // }
-
     public String getWord() {
         return this.word;
     }

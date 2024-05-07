@@ -57,8 +57,8 @@ public class GBFS {
             }
         }
 
-        long endTime = System.nanoTime(); // Record end time
-        double runtime = (double)(endTime - startTime)/1000000; // Calculate runtime in nanoseconds
+        long endTime = System.nanoTime(); 
+        double runtime = (double)(endTime - startTime)/1000000; 
 
         if (pq.size() != 0) {
             List<String> path = new ArrayList<>();
@@ -69,6 +69,12 @@ public class GBFS {
             Collections.reverse(path);
             return new Result(nodeCount, runtime, path);
         } else {
+            if (currentWord.getCost() == 0) {
+                List<String> path = new ArrayList<>();
+                path.add(currentWord.getWord());
+                System.out.println("Kata awal dan kata target sama.");
+                return new Result(nodeCount, runtime, path);
+            }
             return new Result(nodeCount, runtime, null);
         }
     }

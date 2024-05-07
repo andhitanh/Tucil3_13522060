@@ -7,8 +7,8 @@ import Util.Input;
 public class Main {
     public static void main(String[] args) {
         Input input = new Input();
+        Result hasil;
 
-        Result hasil = new Result(0, 0, null);
         if (input.getAlgorithmChoice() == 1) {
             hasil = Astar.resulting(input.getInputNode(), input.getTargetNode());
         } else if (input.getAlgorithmChoice() == 2) {
@@ -18,14 +18,17 @@ public class Main {
         }
 
         if (hasil.getPath() != null) {
-            System.out.println("Hasil : ");
-            for(int i = 0; i < hasil.getPath().size(); i++) {
+            System.out.println("Lintasan : ");
+            for (int i = 0; i < hasil.getPath().size(); i++) {
                 System.out.println(hasil.getPath().get(i));
             }
+            System.out.println("Panjang lintasan solusi : " + (hasil.getPath().size() - 1));
         } else {
             System.out.println("Path tidak ditemukan.");
         }
+
+        System.out.println();
         System.out.println("Banyak node dikunjungi : " + hasil.getVisited());
-        System.out.println("Durasi : " + hasil.getDuration() +" ms.");
+        System.out.println("Durasi : " + hasil.getDuration() + " ms.");
     }
 }

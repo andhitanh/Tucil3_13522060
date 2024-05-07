@@ -13,7 +13,7 @@ public class DictionaryChecker {
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
             while ((line = br.readLine()) != null) {
-                dictionary.add(line.trim().toLowerCase()); // Trim to remove leading/trailing whitespace and convert to lowercase
+                dictionary.add(line.trim().toLowerCase()); 
             }
         } catch (IOException e) {
             e.printStackTrace();

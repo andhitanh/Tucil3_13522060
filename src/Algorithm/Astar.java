@@ -77,6 +77,12 @@ public class Astar {
             Collections.reverse(path);
             return new Result(nodeCount, runtime, path);
         } else {
+            if (currentWord.getCost() == 0) {
+                List<String> path = new ArrayList<>();
+                path.add(currentWord.getWord());
+                System.out.println("Kata awal dan kata target sama.");
+                return new Result(nodeCount, runtime, path);
+            }
             return new Result(nodeCount, runtime, null);
         }
     }
